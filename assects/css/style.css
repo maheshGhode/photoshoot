@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.post{
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.post figcaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    align-items: center;
+    display: flex;
+    vertical-align:middle;
+    text-transform: capitalize;
+    transition: all .3s;
+    transform: scale(0);
+    cursor: pointer;
+}
+
+.post figcaption p{
+    width: 100%;
+}
+
+.post > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Id, .albumbId{
+    position: absolute;
+    top: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all .7s;
+    opacity: 0;
+}
+
+.Id{
+    left: 10px;
+}
+
+.albumbId{
+    right: 10px;
+}
+
+.post:hover figcaption{
+    transform: scale(1);
+}
+
+.post:hover .Id, .post:hover .albumbId{
+    opacity: 1;
+}
